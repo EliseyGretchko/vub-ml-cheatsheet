@@ -91,14 +91,15 @@ Clustering & Groups data into clusters based on similarity (e.g., k-Means, DBSCA
     \item \textbf{Solutions}: Use regularization, simplify the model, or increase data.
 \end{itemize}
 
+
+\section*{Chapter 1: Introduction}
 \subsection*{Types of Learning}
 \begin{itemize}
-    \item \textbf{Supervised Learning}: Labels provided (e.g., regression, classification).
-    \item \textbf{Unsupervised Learning}: No labels (e.g., clustering, dimensionality reduction).
-    \item \textbf{Reinforcement Learning}: Learning via rewards and penalties.
+	\item \textbf{Supervised Learning}: Labels provided (e.g., regression, classification).
+	\item \textbf{Unsupervised Learning}: No labels (e.g., clustering, dimensionality reduction).
+	\item \textbf{Reinforcement Learning}: Learning via rewards and penalties.
 \end{itemize}
 
-\section*{Chapter 1: Linear Models}
 \subsection*{Linear Regression}
 \begin{itemize}
     \item Hypothesis: \( h(x) = \theta_0 + \theta_1 x \).
@@ -114,8 +115,8 @@ Clustering & Groups data into clusters based on similarity (e.g., k-Means, DBSCA
     J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} [y^{(i)} \log h(x^{(i)}) + (1 - y^{(i)}) \log(1 - h(x^{(i)}))].
     \]
 \end{itemize}
-
-\section*{Chapter 2: Decision Trees}
+\section*{Chatper 2: Concept Learning}
+\section*{Chapter 3: Decision Trees}
 \begin{itemize}
     \item \textbf{Entropy}: \( H(D) = - \sum_{i} p_i \log_2 p_i \).
     \item \textbf{Information Gain}:
@@ -223,7 +224,19 @@ IG(D, X_1) \approx 0.401.
 \]
 
 \newpage
-\section*{Chapter 3: Probabilistic Models}
+\section*{Chapter 4: Neural Networks}
+\begin{itemize}
+	\item \textbf{Forward Propagation}: Compute activations layer by layer.
+	\item \textbf{Backpropagation}: Update weights using gradients from the chain rule.
+	\item \textbf{Activation Functions}:
+	\begin{itemize}
+		\item Sigmoid: \( \sigma(x) = \frac{1}{1 + e^{-x}} \).
+		\item ReLU: \( \text{ReLU}(x) = \max(0, x) \).
+		\item Tanh: \( \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} \).
+	\end{itemize}
+\end{itemize}
+\section*{Chapter 5: Evaluating Hypotheses}
+\section*{Chapter 6: Bayesian Learning}
 \subsection*{Bayes' Theorem}
 \[
 P(H|E) = \frac{P(E|H)P(H)}{P(E)}
@@ -281,26 +294,33 @@ P(a, d|\neg b) = P(d|a, \neg b)P(a|\neg b)
 P(d) = P(d|a, b)P(a, b) + P(d|a, \neg b)P(a, \neg b) + P(d|\neg a, b)P(\neg a, b) + P(d|\neg a, \neg b)P(\neg a, \neg b)
 \]
 
-\section*{Chapter 4: Instance-Based Learning}
+\section*{Chapter 7: Computational Learning Theory}
+\subsection*{Version Space and Candidate Elimination}
+\begin{itemize}
+	\item General-to-Specific Ordering: Hypotheses are refined iteratively using training examples.
+	\item Version Space:
+	\[
+	VS_{H,D} = \{ h \in H : h \text{ consistent with } D \}.
+	\]
+	\item Find-S Algorithm:
+	\begin{enumerate}
+		\item Initialize \( S \) to the most specific hypothesis.
+		\item Generalize \( S \) only as needed to be consistent with positive examples.
+	\end{enumerate}
+\end{itemize}
+
+\includegraphics[scale=0.8]{Screenshot 2025-01-09 at 17.35.36.png}
+\section*{Chapter 8: Instance-Based Learning}
 \subsection*{k-Nearest Neighbors (k-NN)}
 \begin{itemize}
-    \item Lazy learner: Stores training data and computes distance during prediction.
-    \item Distance Metric: Euclidean \( \sqrt{\sum (x_i - y_i)^2} \).
+	\item Lazy learner: Stores training data and computes distance during prediction.
+	\item Distance Metric: Euclidean \( \sqrt{\sum (x_i - y_i)^2} \).
 \end{itemize}
 
-\section*{Chapter 5: Neural Networks}
-\begin{itemize}
-    \item \textbf{Forward Propagation}: Compute activations layer by layer.
-    \item \textbf{Backpropagation}: Update weights using gradients from the chain rule.
-    \item \textbf{Activation Functions}:
-    \begin{itemize}
-        \item Sigmoid: \( \sigma(x) = \frac{1}{1 + e^{-x}} \).
-        \item ReLU: \( \text{ReLU}(x) = \max(0, x) \).
-        \item Tanh: \( \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} \).
-    \end{itemize}
-\end{itemize}
 
-\section*{Chapter 6: Reinforcement Learning}
+\section*{Chapter 10: Learning Sets of Rules}
+
+\section*{Chapter 13: Reinforcement Learning}
 \subsection*{Bellman Equation}
 \[
 V(s) = \max_a \left[ R(s, a) + \gamma \sum_{s'} P(s'|s, a)V(s') \right].
@@ -317,22 +337,7 @@ Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s,
     \item Policy improvement.
 \end{enumerate}
 
-\section*{Chapter 7: Learning Theory}
-\subsection*{Version Space and Candidate Elimination}
-\begin{itemize}
-    \item General-to-Specific Ordering: Hypotheses are refined iteratively using training examples.
-    \item Version Space:
-    \[
-    VS_{H,D} = \{ h \in H : h \text{ consistent with } D \}.
-    \]
-    \item Find-S Algorithm:
-    \begin{enumerate}
-        \item Initialize \( S \) to the most specific hypothesis.
-        \item Generalize \( S \) only as needed to be consistent with positive examples.
-    \end{enumerate}
-\end{itemize}
 
-\includegraphics[scale=0.8]{Screenshot 2025-01-09 at 17.35.36.png}
 \section*{Machine Learning Questions and Answers}
 
 \begin{itemize}
