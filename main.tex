@@ -25,6 +25,7 @@ Different learning algorithms can be differentiated/compared based on this bias 
 	\item \textbf{Restriction/Language bias}: This follows from the defenition of the search space. There is a categorical restriction on the set of hypotheses considered. Candidate Elimination searches an \textbf{incomplete search space}, but \textbf{searches it completely} 
 \end{itemize}
 
+See also Inductive bias from a Bayesian perspective (p.163)
 \begin{itemize}
 	\item Ocam's razor argument for the preference of shorte hypotheses (p.65)
 \end{itemize}
@@ -262,7 +263,7 @@ IG(D, X_1) \approx 0.401.
 	\item how the confidence intervals of $error_{D}(h)$ and $error_{S}(h)$ relate to eachother (p.139)
 \end{itemize}
 \section*{Chapter 6: Bayesian Learning}
-\subsection*{Bayes' Theorem}
+\subsection*{Bayes' Theorem} (p.156)
 \[
 P(H|E) = \frac{P(E|H)P(H)}{P(E)}
 \]
@@ -271,7 +272,7 @@ where:
 P(E) = \sum_i P(E|H_i)P(H_i)
 \]
 
-\subsection*{MAP (Maximum A Posteriori)}
+\subsection*{MAP (Maximum A Posteriori) (p.157)}
 \[
 H_{\text{MAP}} = \arg\max_H P(H|E) = \arg\max_H P(E|H)P(H)
 \]
@@ -293,7 +294,7 @@ where:
 P(c) = P(c|a)P(a) + P(c|\neg a)P(\neg a)
 \]
 
-\subsection*{Sum Rule}
+\subsection*{Sum Rule} (p.159)
 \[
 P(A) = P(A \cap B) + P(A \cap \neg B)
 \]
@@ -318,7 +319,18 @@ P(a, d|\neg b) = P(d|a, \neg b)P(a|\neg b)
 \[
 P(d) = P(d|a, b)P(a, b) + P(d|a, \neg b)P(a, \neg b) + P(d|\neg a, b)P(\neg a, b) + P(d|\neg a, \neg b)P(\neg a, \neg b)
 \]
-
+\newline
+\begin{itemize}
+	\item Reason for why every consistent hypothesis is a MAP hypothesis. (p.162)
+	\item How posterior probabilities evolve with increasing data (p.162)
+	\item \textbf{consistent learners} (p.162)
+	\item why Find-S outputs MAP hypothesis (p.163)
+	\item inductive bias from a bayesian perspective (p.163)
+	\item Bayesian justification for why any learning algorithm that minimizes squared error will output MAP under certain assumptions (p.164+ see 167)
+	
+	
+	
+\end{itemize}
 \section*{Chapter 7: Computational Learning Theory}
 
 
