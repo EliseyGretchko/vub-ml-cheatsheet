@@ -56,7 +56,7 @@ Different learning algorithms can be differentiated/compared based on this bias 
 
 \subsection*{Overfitting vs. Underfitting}
 \begin{itemize}
-    \item \textbf{Overfitting}: High training accuracy but poor generalization.
+    \item \textbf{Overfitting}: High training accuracy but poor generalization. See more formally p.67
     \item \textbf{Underfitting}: Poor performance on both training and test data.
     \item \textbf{Solutions}: Use regularization, simplify the model, or increase data.
 \end{itemize}
@@ -106,15 +106,20 @@ Different learning algorithms can be differentiated/compared based on this bias 
 	\item Consequences of \textbf{violating assumptions} of \textbf{Candidate-Elimination }  (p.37)
 	\item Best next query strategy (p.38)
 	\item Relation between "best next query strategy" and ambiguity in not fully learned concepts: \emph{"those instances whose classification is most ambiguous are precisely the instances whose true classification would provide the most new information for refingn the vversions space". } (p.39)
+	\item natural bias of information gain for attributes with many values and \textbf{gain ratio} as an alternative (p.73) 
 \end{itemize}
 \section*{Chapter 3: Decision Trees}
 \begin{itemize}
-    \item \textbf{Entropy}: \( H(D) = - \sum_{i} p_i \log_2 p_i \).
-    \item \textbf{Information Gain}:
+    \item \textbf{Entropy} (p.57): \( H(D) = - \sum_{i} p_i \log_2 p_i \).
+    \newline
+    Note: $\log_2 0 = 0$
+    \item \textbf{Information Gain} (p.58):
     \[
     IG(D, A) = H(D) - \sum_{v \in \text{Values}(A)} \frac{|D_v|}{|D|} H(D_v).
     \]
-    \item Prone to overfitting; use pruning techniques.
+    \item \textbf{ID3} pseudocode (p.56) 
+    \item discussion of ID3 (p.61), see also general discussion of descision tree learning (p.66)
+    
 \end{itemize}
 
 
