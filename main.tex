@@ -116,6 +116,27 @@ Clustering & Groups data into clusters based on similarity (e.g., k-Means, DBSCA
     \]
 \end{itemize}
 \section*{Chatper 2: Concept Learning}
+
+\begin{itemize}
+	\item Defenition of concept learning (p. 21)
+	\item Calculating the instance space, syntactically and semantically distinct hypotheses (p. 23-24)
+	\item \textbf{General-to-Specific order} and the importance of \textbf{partial order} (p.24-25)
+	\item \textbf{Find-S} pseudocode (p.26)
+	\item \textbf{negative exaples in Find-S:} Why negative examples are not revised in given certain assumptions (p.27)  
+	\item Issues with Find-S: impact of ignoring negative cases on sensitivity to noise (p.28)
+	\item Difference between \textbf{consistency} and \textbf{satisfiability } of hypotheses (p.29) 
+	\item \textbf{Candidate-Elimination Algorithm} pseudocode (p.33)   
+	\item Useful consequence of general-to-specific ordering:
+	\begin{itemize}
+		\item If \textbf{positive}  instance for h in \textbf{S} then surely positive for every h that is more general
+		\item if \textbf{negative} instance for h in \textbf{G}  then surely negative for every h that is more specific (p.35)
+		
+		Linked with why we first remove inconsistensies in Candidate-Elimination
+	\end{itemize}
+	\item Consequences of \textbf{violating assumptions} of \textbf{Candidate-Elimination }  (p.37)
+	\item Best next query strategy (p.38)
+	\item Relation between "best next query strategy" and ambiguity in not fully learned concepts: \emph{"those instances whose classification is most ambiguous are precisely the instances whose true classification would provide the most new information for refingn the vversions space". } (p.39)
+\end{itemize}
 \section*{Chapter 3: Decision Trees}
 \begin{itemize}
     \item \textbf{Entropy}: \( H(D) = - \sum_{i} p_i \log_2 p_i \).
