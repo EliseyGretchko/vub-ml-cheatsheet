@@ -51,42 +51,7 @@ Different learning algorithms can be differentiated/compared based on this bias 
     \text{Total Error} = \text{Bias}^2 + \text{Variance} + \text{Irreducible Error}.
     \]
 \end{itemize}
-\begin{longtable}{|p{3cm}|p{5cm}|p{5cm}|p{3cm}|}
-\hline
-\textbf{Model} & \textbf{Core Characteristics} & \textbf{Strengths} & \textbf{Limitations} \\
-\hline
-\endfirsthead
-\hline
-\textbf{Model} & \textbf{Core Characteristics} & \textbf{Strengths} & \textbf{Limitations} \\
-\hline
-\endhead
-\hline
-\endfoot
-\hline
-\endlastfoot
 
-Concept Learning & Hypotheses represented as conjunctions of attribute constraints; Utilizes General-to-Specific search or Candidate Elimination algorithms. & Easy to implement; Intuitive understanding of learning process. & Sensitive to noise; Limited hypothesis expressivity. \\
-\hline
-
-Decision Trees & Trees where nodes represent attributes and branches represent attribute values; Uses algorithms like ID3 or C4.5. & Handles both numerical and categorical data; Easy to interpret. & Prone to overfitting; Instability with small changes in data. \\
-\hline
-
-Bayesian Networks & Graphical models using Bayes' theorem; Encodes conditional dependencies among variables. & Probabilistic reasoning; Handles uncertainty effectively. & Computationally expensive; Requires expert knowledge for structure design. \\
-\hline
-
-Instance-Based Learning & Memory-based approach (e.g., k-Nearest Neighbors); Classification based on similarity measures. & No training phase; Adapts to complex decision boundaries. & Computationally intensive at prediction; Requires good distance metrics. \\
-\hline
-
-Neural Networks & Layers of interconnected nodes; Learning via backpropagation and gradient descent. & Highly expressive; Effective for non-linear relationships. & Requires large datasets; Computationally expensive to train. \\
-\hline
-
-Reinforcement Learning & Agent-based learning optimizing cumulative rewards using policies; e.g., Q-learning. & Useful for sequential decision-making; Works in dynamic environments. & Requires significant exploration; Computationally intensive. \\
-\hline
-
-Clustering & Groups data into clusters based on similarity (e.g., k-Means, DBSCAN). & Identifies structure in data; No labels required. & Sensitive to initial conditions and distance metrics. \\
-\hline
-
-\end{longtable}
 
 \subsection*{Evaluation Metrics}
 \begin{align*}
