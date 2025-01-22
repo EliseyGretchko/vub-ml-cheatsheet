@@ -295,21 +295,8 @@ P(d) = P(d|a, b)P(a, b) + P(d|a, \neg b)P(a, \neg b) + P(d|\neg a, b)P(\neg a, b
 \]
 
 \section*{Chapter 7: Computational Learning Theory}
-\subsection*{Version Space and Candidate Elimination}
-\begin{itemize}
-	\item General-to-Specific Ordering: Hypotheses are refined iteratively using training examples.
-	\item Version Space:
-	\[
-	VS_{H,D} = \{ h \in H : h \text{ consistent with } D \}.
-	\]
-	\item Find-S Algorithm:
-	\begin{enumerate}
-		\item Initialize \( S \) to the most specific hypothesis.
-		\item Generalize \( S \) only as needed to be consistent with positive examples.
-	\end{enumerate}
-\end{itemize}
 
-\includegraphics[scale=0.8]{Screenshot 2025-01-09 at 17.35.36.png}
+
 \section*{Chapter 8: Instance-Based Learning}
 \subsection*{k-Nearest Neighbors (k-NN)}
 \begin{itemize}
@@ -380,6 +367,8 @@ Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s,
     \item \textbf{In the k-means algorithm, the number of clusters (k) must be determined after the algorithm runs and the data points are assigned to clusters: False.} The algorithm requires $k$ as an input to initialize centroids and assign data points.
 
 \end{itemize}
+
+\includegraphics[scale=0.8]{Screenshot 2025-01-09 at 17.35.36.png}
 
 \end{document}
 
