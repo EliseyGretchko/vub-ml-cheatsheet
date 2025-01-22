@@ -15,19 +15,31 @@
 \section*{Biases in Machine Learning}
 
 \subsection*{Inductive Bias}
-Inductive bias refers to the assumptions a learning algorithm makes to generalize beyond the training data. It enables the algorithm to choose among multiple hypotheses consistent with the data, making learning possible. For instance, decision tree algorithms assume simpler trees are more likely correct, adhering to Occam's Razor. While necessary, the strength of inductive bias determines the trade-off between flexibility and overfitting. A weak inductive bias allows exploration of diverse hypotheses but risks overfitting, whereas a strong bias ensures efficiency at the cost of flexibility.
+Inductive bias refers to the assumptions a learning algorithm makes to generalize beyond the training data. It enables the algorithm to choose among multiple hypotheses consistent with the data, making learning possible. 
 
-\subsection*{Hypothesis Space Bias}
-Hypothesis space bias arises from the set of hypotheses the algorithm considers. By limiting the hypothesis space, the algorithm becomes computationally efficient but may exclude the true target function. For example, linear regression restricts solutions to linear relationships, which might not capture nonlinear patterns. This bias ensures tractability but requires the hypothesis space to align closely with the true concept. Careful design of the hypothesis space is critical to balancing computational constraints and accuracy.
+Different learning algorithms can be differentiated/compared based on this bias (p.64):
 
-\subsection*{Search Bias}
-Search bias refers to how an algorithm explores the hypothesis space during learning. Algorithms like ID3 use greedy search strategies, prioritizing locally optimal splits based on metrics like information gain. While efficient, this approach may lead to suboptimal solutions by missing global optima. Search bias influences the speed of learning and the type of solutions reached. It complements hypothesis space bias by determining the exploration method within the given constraints.
+\begin{itemize}
+	\item \textbf{Search/Preference Bias}: This follows from the search strategy. There is a preference for certain hypotheses over others (e.g. shorter hypotheses), with no hard restriction on the hypohteses that can eventually be enumarated. ID3 searches a \textbf{complete hypothesis space}, but  \textbf{searches it incompletely}. Typically, this bias is more desirable (p.64 for justification). 
+	
+	\item \textbf{Restriction/Language bias}: This follows from the defenition of the search space. There is a categorical restriction on the set of hypotheses considered. Candidate Elimination searches an \textbf{incomplete search space}, but \textbf{searches it completely} 
+\end{itemize}
 
-\subsection*{Representation Bias}
-Representation bias stems from how data and hypotheses are structured. The choice of representation affects what patterns the algorithm can learn. For example, representing data in binary format allows Boolean logic-based algorithms to perform efficiently but limits their ability to capture complex patterns. This bias is inherently linked to the domain knowledge used to preprocess data and design the learning task. A well-chosen representation enhances learning, while a poor one hinders it.
+\begin{itemize}
+	\item Ocam's razor argument for the preference of shorte hypotheses (p.65)
+\end{itemize}
 
-\subsection*{Model Selection Bias}
-Model selection bias concerns the trade-off between high- and low-bias models. Simpler models (high bias) generalize better but may underfit, while complex models (low bias) capture more details but risk overfitting. For example, linear regression is a high-bias approach compared to polynomial regression, which offers lower bias and higher variance. Selecting the appropriate model depends on the problem complexity and the available data.
+
+%\subsection*{Hypothesis Space Bias}
+%Hypothesis space bias arises from the set of hypotheses the algorithm considers. By limiting the hypothesis space, the algorithm becomes computationally efficient but may exclude the true target function. For example, linear regression restricts solutions to linear relationships, which might not capture nonlinear patterns. This bias ensures tractability but requires the hypothesis space to align closely with the true concept. Careful design of the hypothesis space is critical to balancing computational constraints and accuracy.
+
+
+
+%\subsection*{Representation Bias}
+%Representation bias stems from how data and hypotheses are structured. The choice of representation affects what patterns the algorithm can learn. For example, representing data in binary format allows Boolean logic-based algorithms to perform efficiently but limits their ability to capture complex patterns. This bias is inherently linked to the domain knowledge used to preprocess data and design the learning task. A well-chosen representation enhances learning, while a poor one hinders it.
+
+%\subsection*{Model Selection Bias}
+%Model selection bias concerns the trade-off between high- and low-bias models. Simpler models (high bias) generalize better but may underfit, while complex models (low bias) capture more details but risk overfitting. For example, linear regression is a high-bias approach compared to polynomial regression, which offers lower bias and higher variance. Selecting the appropriate model depends on the problem complexity and the available data.
 
 
 \subsection*{Bias-Variance Trade-off}
